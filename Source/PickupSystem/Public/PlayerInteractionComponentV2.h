@@ -3,8 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "IncludePickSystem.h"
 #include "Components/SphereComponent.h"
 #include "PlayerInteractionComponentV2.generated.h"
+
+
+//Forward Declaration
+//class UInteractableActorComponent;
+//class UPlayerInteractionComponentV2;
 
 /**
  * 
@@ -17,4 +24,13 @@ class PICKUPSYSTEM_API UPlayerInteractionComponentV2 : public USphereComponent
 
 public:
 	UPlayerInteractionComponentV2();
+
+	virtual void BeginPlay() override;
+
+	UFUNCTION()
+	void OnInteractionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+	                               UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
+	                               const FHitResult& SweepResult);
+	
+	bool CollectInteractableActor(UInteractableActorComponent* InteractableActorComponent);
 };

@@ -32,3 +32,34 @@ void UInteractableActorComponent::TickComponent(float DeltaTime, ELevelTick Tick
 	// ...
 }
 
+FInteractionOption UInteractableActorComponent::GetInteractionOptions()
+{
+	return Options;
+}
+
+void UInteractableActorComponent::Interact(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent,
+	InteractionType& Type) 
+{
+	UE_LOG(LogTemp, Warning, TEXT("debuga z Interact") );
+	if(Type == InteractionType::COLLECT ||Type == InteractionType::INSTA_COLLECT)
+	{
+		if(PlayerComponent->CollectInteractableActor(this))
+		{
+			AActor* Owner = GetOwner();
+			if(Owner ==nullptr)
+			{
+				return;;
+			}
+			Owner->bHiddenEdLevel =true;
+		}
+		
+	}
+}
+
+
+bool UInteractableActorComponent::CanInteract(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent)
+{
+	return true;
+}
+
+
