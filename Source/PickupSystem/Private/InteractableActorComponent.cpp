@@ -3,6 +3,8 @@
 
 #include "InteractableActorComponent.h"
 
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values for this component's properties
 UInteractableActorComponent::UInteractableActorComponent()
 {
@@ -18,42 +20,53 @@ UInteractableActorComponent::UInteractableActorComponent()
 void UInteractableActorComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	// ...
 	
 }
 
 
-// Called every frame
-void UInteractableActorComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
-}
 
 FInteractionOption UInteractableActorComponent::GetInteractionOptions()
 {
 	return Options;
 }
 
-void UInteractableActorComponent::Interact(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent,
-	InteractionType& Type) 
+bool UInteractableActorComponent::Interact(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent,
+                                           InteractionType& Type) 
 {
 	UE_LOG(LogTemp, Warning, TEXT("debuga z Interact") );
-	if(Type == InteractionType::COLLECT ||Type == InteractionType::INSTA_COLLECT)
+	AActor* Owner = GetOwner();
+	if(Owner ==nullptr)
+	{
+		return false;
+	}
+	
+	if(Type == InteractionType::INSTA_COLLECT)
 	{
 		if(PlayerComponent->CollectInteractableActor(this))
 		{
-			AActor* Owner = GetOwner();
-			if(Owner ==nullptr)
-			{
-				return;;
-			}
-			Owner->bHiddenEdLevel =true;
+			// Owner->bHiddenEdLevel =true;
+			//Owner->Destroy();
+			return  true;
 		}
-		
 	}
+
+	if(Type == InteractionType::COLLECT)
+	{
+		if(PlayerComponent->CollectInteractableActor(this))
+		{
+			return true;
+		}
+	}
+	
+	if(Type == InteractionType::LISTEN)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this,ListenSound,GetOwner()->GetActorLocation());
+		return true;
+	}
+
+	return  false;
 }
 
 

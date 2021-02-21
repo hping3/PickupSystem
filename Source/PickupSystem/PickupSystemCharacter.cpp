@@ -100,6 +100,7 @@ void APickupSystemCharacter::OnResetVR()
 void APickupSystemCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
 		Jump();
+	
 }
 
 void APickupSystemCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)

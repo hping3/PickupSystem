@@ -7,15 +7,19 @@
 #include "Components/ActorComponent.h"
 #include "InteractableActorComponent.generated.h"
 
+//Forward Declaration
+class UInteractableActorComponent;
+class UPlayerInteractionComponentV2;
 
 
 UENUM(BlueprintType)
 enum class InteractionType : uint8 {
-	COLLECT = 0			UMETA(DisplayName = "COLLECT"),
-    INSTA_COLLECT = 1	UMETA(DisplayName = "INSTA_COLLECT"),
-    LISTEN = 2			UMETA(DisplayName = "LISTEN"),
-	READ = 3			UMETA(DisplayName = "READ"),
-    USE = 4				UMETA(DisplayName = "USE") 
+	NONE = 0			UMETA(DisplayName = "NONE"),
+	COLLECT = 1			UMETA(DisplayName = "COLLECT"),
+    INSTA_COLLECT = 2	UMETA(DisplayName = "INSTA_COLLECT"),
+    LISTEN = 3			UMETA(DisplayName = "LISTEN"),
+	READ = 4			UMETA(DisplayName = "READ"),
+    USE = 5				UMETA(DisplayName = "USE") 
 };
 
 USTRUCT(BlueprintType)
@@ -27,7 +31,7 @@ struct FInteractionOption
 	InteractionType DefaultOption;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="PickupSystem")
-	TArray<InteractionType> Options;
+	TArray<InteractionType> AvailableOptions;
 };
 
 
@@ -43,18 +47,20 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="PickupSystem")
 	FInteractionOption Options;
-	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="PickupSystem")
+	USoundBase* ListenSound;
+
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 
 	virtual FInteractionOption GetInteractionOptions();
-	virtual void Interact(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent,InteractionType& Type) ;
+	virtual bool Interact(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent, InteractionType& Type) ;
 	virtual bool CanInteract(AActor* Actor, UPlayerInteractionComponentV2* PlayerComponent);
 	
 };
