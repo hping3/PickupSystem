@@ -22,11 +22,13 @@ enum class InteractionType : uint8 {
     USE = 5				UMETA(DisplayName = "USE") 
 };
 
+
 USTRUCT(BlueprintType)
 struct FInteractionOption
 {
 	GENERATED_BODY()
-	
+
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="PickupSystem")
 	InteractionType DefaultOption;
 

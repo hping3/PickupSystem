@@ -5,21 +5,20 @@
     <projectFile>Intermediate/ProjectFiles/UE4.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d4f8be8-e8d4-43be-8543-bf716095dfd1" name="Default Changelist" comment="Update">
+    <list default="true" id="0d4f8be8-e8d4-43be-8543-bf716095dfd1" name="Default Changelist" comment="Mocowanie sie z menu">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PickupSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PickupSystem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PickupSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PickupSystem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_Item.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_Item.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_Audio.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_Audio.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_Gold.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_Gold.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Blueprints/ThirdPersonCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPersonCPP/Maps/ThirdPersonExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PickupSystem.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/PickupSystem.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PickupSystem/PickupSystem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/PickupSystem.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PickupSystem/PickupSystemCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/PickupSystemCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Private/InteractableActorComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Private/InteractableActorComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI_PickupMenu.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI_PickupMenu.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Private/UI_InteractMenuCPP.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Private/UI_InteractMenuCPP.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Public/InteractableActorComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Public/InteractableActorComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Public/PlayerInteractionComponentV2.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Public/PlayerInteractionComponentV2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PickupSystem/Public/UI_InteractMenuCPP.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PickupSystem/Public/UI_InteractMenuCPP.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +55,14 @@
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Private/Components/ActorComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/UMG/Private/UserWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Private/PrimitiveComponentPhysics.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Core/Public/UObject/NameTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Public/SceneManagement.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerInput.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Private/UserInterface/PlayerInput.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/CoreUObject/Public/UObject/ObjectMacros.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Classes/Components/ShapeComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../UE4_ENGINE/UE_4.26/Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -73,12 +74,14 @@
       <option value="$PROJECT_DIR$/Source/PickupSystem/Public/IncludePickSystem.h" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/PickupSystemCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/Private/InteractableActorComponent.cpp" />
-      <option value="$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/PickupSystem.Build.cs" />
-      <option value="$PROJECT_DIR$/Source/PickupSystem/Public/PlayerInteractionComponentV2.h" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/Private/UI_InteractMenuCPP.cpp" />
+      <option value="$PROJECT_DIR$/Source/PickupSystem/Public/MyHUD.h" />
+      <option value="$PROJECT_DIR$/Source/PickupSystem/Private/MyHUD.cpp" />
+      <option value="$PROJECT_DIR$/Source/PickupSystem/Public/PlayerInteractionComponentV2.h" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/Public/InteractableActorComponent.h" />
       <option value="$PROJECT_DIR$/Source/PickupSystem/Public/UI_InteractMenuCPP.h" />
+      <option value="$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ocgKqlYxZC0lBq1coa6AODGAEP" />
@@ -427,7 +430,9 @@
       <workItem from="1613738131557" duration="934000" />
       <workItem from="1613754007490" duration="3048000" />
       <workItem from="1613816049228" duration="26047000" />
-      <workItem from="1613909572521" duration="13175000" />
+      <workItem from="1613909572521" duration="18523000" />
+      <workItem from="1614189365649" duration="14895000" />
+      <workItem from="1614210120088" duration="1904000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1613829580403</created>
@@ -436,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613829580403</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mocowanie sie z menu">
+      <created>1613930322180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613930322180</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,20 +471,21 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Mocowanie sie z menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mocowanie sie z menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp</url>
-          <line>27</line>
-          <option name="timeStamp" value="3" />
+          <line>165</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/PickupSystem/Public/UI_InteractMenuCPP.h</url>
-          <line>4</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/Source/PickupSystem/Private/PlayerInteractionComponentV2.cpp</url>
+          <line>162</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

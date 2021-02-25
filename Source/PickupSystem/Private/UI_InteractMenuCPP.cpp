@@ -3,6 +3,12 @@
 
 #include "UI_InteractMenuCPP.h"
 
-void UUI_InteractMenuCPP::ShowMenu_Implementation(FInteractionOption Options)
+
+UUI_InteractMenuCPP::UUI_InteractMenuCPP(const FObjectInitializer& MovieSceneBlends) : Super(MovieSceneBlends)
 {
+}
+
+void UUI_InteractMenuCPP::NativeConstruct()
+{
+	Super::NativeConstruct();
 }

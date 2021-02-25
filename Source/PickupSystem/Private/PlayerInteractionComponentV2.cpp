@@ -21,7 +21,9 @@ UPlayerInteractionComponentV2::UPlayerInteractionComponentV2()
 		PrimaryComponentTick.bStartWithTickEnabled = true;
 	}
 	
-
+	
+	//InteractMenu =
+	
 	
 }
 
@@ -42,6 +44,20 @@ void UPlayerInteractionComponentV2::BeginPlay()
 	}else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Object not inherid by ACharacter. User input actions don't work. ") );
+	}
+
+
+	if(UIInteractionClass)
+	{
+		//UIInstance = CreateWidget<UUI_InteractMenuCPP>(GetWorld(),UIclass);
+		UIInteractionInstance = CreateWidget<UUI_InteractMenuCPP>(
+            Cast<APlayerController>(GetOwner()->GetInstigatorController()), UIInteractionClass);
+		if(UIInteractionInstance)
+		{
+			UIInteractionInstance->AddToViewport();
+			UIInteractionInstance->OnShowTestMenu();
+		}
+		
 	}
 
 
@@ -138,7 +154,22 @@ void UPlayerInteractionComponentV2::OnUse()
 			comp->Interact(GetOwner(),this,OptionsInComp.DefaultOption);
 		}else
 		{
-			//@todo show popupmenu 	
+			
+			UIInteractionInstance->OnShowMenuWithComp(comp);
+
+			
+			
+		// InteractMenuInstantion->AddToViewport(100);
+		// InteractMenuInstantion->OnShowTestMenu();
+			
+			/*
+			if(UUI_InteractMenuCPP* LocalGui =Cast<UUI_InteractMenuCPP>(InteractMenu->GetClass()) ){
+				LocalGui->ShowTestMenu();
+			}else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Cos nie tak w Show Test MEnu") );
+			}*/
+			
 		}
 
 		

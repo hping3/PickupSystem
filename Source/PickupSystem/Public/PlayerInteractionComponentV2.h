@@ -26,9 +26,8 @@ class PICKUPSYSTEM_API UPlayerInteractionComponentV2 : public USphereComponent
 public:
 	UPlayerInteractionComponentV2();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="PickupSystem")
-	TSubclassOf<class UUI_InteractMenuCPP> InteractMenu;
-	
+	UPROPERTY(EditDefaultsOnly, Category="PickupSystem")
+	TSubclassOf<class UUI_InteractMenuCPP> UIInteractionClass;
 
 	virtual void BeginPlay() override;
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -52,5 +51,13 @@ public:
 protected:
 	TArray<AActor*> ActorsInRange;
 	TArray<AActor*> CollectedItems;
+
+	UUI_InteractMenuCPP* UIInteractionInstance;
+
+
+	
+
+
+	
 	
 };

@@ -49743,6 +49743,7 @@
           <e p="PickupSystemGameMode.h" t="Include" />
           <e p="Private" t="Include">
             <e p="InteractableActorComponent.cpp" t="Include" />
+            <e p="MyHUD.cpp" t="Include" />
             <e p="PlayerInteractionComponent.cpp" t="Include" />
             <e p="PlayerInteractionComponentV2.cpp" t="Include" />
             <e p="UI_InteractMenuCPP.cpp" t="Include" />
@@ -49750,6 +49751,7 @@
           <e p="Public" t="Include">
             <e p="IncludePickSystem.h" t="Include" />
             <e p="InteractableActorComponent.h" t="Include" />
+            <e p="MyHUD.h" t="Include" />
             <e p="PlayerInteractionComponent.h" t="Include" />
             <e p="PlayerInteractionComponentV2.h" t="Include" />
             <e p="UI_InteractMenuCPP.h" t="Include" />

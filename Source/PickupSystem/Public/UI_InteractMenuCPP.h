@@ -2,12 +2,16 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-
 #include "InteractableActorComponent.h"
+#include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+
+
+
 #include "UI_InteractMenuCPP.generated.h"
 
+//forward declaration nie dizala w przypadku parametru dla struktury w ufunction
+// struct FInteractionOption;
 /**
  * 
  */
@@ -16,9 +20,24 @@ class PICKUPSYSTEM_API UUI_InteractMenuCPP : public UUserWidget
 {
 	GENERATED_BODY()
 	public:
-//@Todo jak zadeklarować metode tak aby niebyla potrzebna implementacja w c++, to ma byc metoda w caloscinapisana w BP
-	UFUNCTION(BlueprintNativeEvent)
-	void ShowMenu(FInteractionOption Options);
 
-	//FInteractionOption Options)
+
+	UUI_InteractMenuCPP(const FObjectInitializer& MovieSceneBlends);
+		
+
+protected:
+	virtual void NativeConstruct() override;
+public:
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnShowMenuWithComp(UInteractableActorComponent* Component);
+
+	UFUNCTION(BlueprintImplementableEvent)
+    void OnShowTestMenu();
+
+	//UFUNCTION(BlueprintImplementableEvent)
+	//void ShowMenuWithStruct(FInteractionOption tesowyparams);
+
+	// UFUNCTION(BlueprintImplementableEvent)
+    // void ShowMenuWithStruct(UMyPassClass* tesowyparams);
+    
 };
